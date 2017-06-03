@@ -6,7 +6,7 @@ import {
 } from 'react-native'
 
 class Loading extends Component {
-  render() {
+  render () {
     return (
       <View style={styles.container}>
         <Text style={styles.title}>
@@ -24,11 +24,11 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+    backgroundColor: '#F5FCFF'
   },
   title: {
     fontSize: 20,
     textAlign: 'center',
-    margin: 10,
+    margin: 10
   }
 })
