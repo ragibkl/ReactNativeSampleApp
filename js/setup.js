@@ -4,6 +4,7 @@ import { compose, applyMiddleware, createStore } from 'redux'
 import { Provider } from 'react-redux'
 import thunkMiddleware from 'redux-thunk'
 import { persistStore, autoRehydrate } from 'redux-persist'
+import format from 'string-format'
 
 import appReducer from './reducers/appReducer'
 
@@ -61,5 +62,10 @@ class ReduxApp extends Component {
 }
 
 export function setup () {
+  // init string-format extension of js String.prototype
+  format.extend(String.prototype)
+
+  // other init scripts here
+
   return ReduxApp
 }

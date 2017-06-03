@@ -10,6 +10,10 @@ function userProfile (state = initial, action) {
         ...state,
         name: action.payload
       }
+    case 'LOGOUT':
+      return {
+        ...initial
+      }
     default:
       return state
   }

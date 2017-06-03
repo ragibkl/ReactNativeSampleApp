@@ -1,42 +1,26 @@
 import React, { Component } from 'react'
-import {
-  StyleSheet,
-  Text,
-  View
-} from 'react-native'
+import { connect } from 'react-redux'
 
+import AppRoutes from './AppRoutes'
+
+// Main app component. Marks the app completely loaded.
+// Best place to declare background task, or initiate data fetch for logged in users
 class App extends Component {
+  shouldComponentUpdate (nextProps, nextState) {
+    // Since this is the main component, we don't want this component to get re-rendered unnecessarily
+    return false
+  }
   render () {
     return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
-        <Text style={styles.instructions}>
-          This is a sample React Native mobile app.
-        </Text>
-      </View>
+      <AppRoutes />
     )
   }
 }
 
-export default App
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF'
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5
+function mapStateToProps (state) {
+  return {
+    isLoggedIn: !!state.userProfile.name
   }
-})
+}
+
+export default connect(mapStateToProps)(App)
