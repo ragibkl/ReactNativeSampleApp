@@ -19,7 +19,7 @@ List of plugins installed.
 
 ## Getting Started
 
-1. Follow the getting started guide for [React Native](https://facebook.github.io/react-native/docs/getting-started.html). Make sure that your dev environment is set up, and that you are able to start/run a sample React Native app. Make sure that you at least complete the [tutorial](https://facebook.github.io/react-native/docs/tutorial.html) as well
+1. Follow the React Native [getting started](https://facebook.github.io/react-native/docs/getting-started.html) guide. Make sure that your dev environment is set up, and that you are able to start/run a sample React Native app. Make sure that you at least complete the [tutorial](https://facebook.github.io/react-native/docs/tutorial.html) as well
 2. Once you are set up, clone
 ```bash
 git clone https://github.com/ragibkl/ReactNativeSampleApp.git
@@ -35,8 +35,10 @@ mv ReactNativeSampleApp-master ReactNativeSampleApp
 cd ReactNativeSampleApp
 npm install
 ```
-4. start the app.
+4. start the app:
+
    on iOS: `react-native run-ios`
+
    on Android: `react-native run-android`
 5. Familiarize yourself with the code structure. Of importance are how the app's root component is initialized, and how navigation routes are defined and used.
 6. Read some docs on [react-native-router-flux](https://github.com/aksonov/react-native-router-flux) and [redux, react-redux](http://redux.js.org/) to learn how they work and how to use them.
@@ -55,6 +57,13 @@ react-native init [ProjectName] --version 0.44.0
 npm install --save react-native-router-flux redux react-redux redux-thunk redux-persist string-format
 ```
 3. Copy the js/ folder from this codebase to your project. Edit your index.ios.js and index.android.js to match what is included in this project. Make sure you maintain your own [ProjectName] in AppRegistry line
+```javascript
+// index.ios.js, index.android.js
+
+// ...
+
+AppRegistry.registerComponent('[ProjectName]', () => [ProjectName])
+```
 4. Continue editing the project as you see fit.
 
 ## Integrating into an existing project
