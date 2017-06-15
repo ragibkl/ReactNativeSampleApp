@@ -1,12 +1,14 @@
 export function loadName (name = '') {
-  return {
+  const action = {
     type: 'LOAD_NAME',
     payload: name
   }
+  return action
 }
 
 export function logout () {
-  return {
+  const action = {
     type: 'LOGOUT'
   }
+  return action
 }
