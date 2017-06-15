@@ -64,7 +64,11 @@ npm install --save react-native-router-flux redux react-redux redux-thunk redux-
 
 AppRegistry.registerComponent('[ProjectName]', () => [ProjectName])
 ```
-4. Continue editing the project as you see fit.
+4. Add the following to AndroidManifest.xml to enable [NetInfo](https://facebook.github.io/react-native/docs/netinfo.html) api for Android
+```xml
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+```
+5. Continue editing the project as you see fit.
 
 ## Integrating into an existing project
 There is not much guidance I can provide here. You should treat this codebase as a guide. You may copy anything from this codebase that you find useful into your own project.
