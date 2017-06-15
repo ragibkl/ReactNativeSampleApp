@@ -34,6 +34,27 @@ class Page1 extends Component {
             title='Page 2'
           />
         </View>
+        <Text style={styles.instructions}>
+          The following links to pages that demo how apiFetch and redux works.
+        </Text>
+        <View style={styles.button}>
+          <Button
+            onPress={() => Actions.posts1()}
+            title='Posts'
+          />
+        </View>
+        <View style={styles.button}>
+          <Button
+            onPress={() => Actions.posts2()}
+            title='Posts Redux'
+          />
+        </View>
+        <View style={styles.button}>
+          <Button
+            onPress={() => Actions.posts3()}
+            title='Posts Redux Thunk'
+          />
+        </View>
       </View>
     )
   }

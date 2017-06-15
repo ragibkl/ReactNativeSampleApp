@@ -40,6 +40,7 @@ class ReduxApp extends Component {
     persistStore(store, {
       storage: AsyncStorage,
       whitelist: [
+        'posts',
         'userProfile'
       ]
     }, () => this.handleStoreRehydrateComplete())

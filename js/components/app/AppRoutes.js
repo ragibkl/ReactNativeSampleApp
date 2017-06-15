@@ -6,6 +6,10 @@ import Welcome from '../welcome/Welcome'
 import Page1 from '../pages/Page1'
 import Page2 from '../pages/Page2'
 
+import PostList from '../posts/PostList'
+import PostListRedux from '../posts/PostListRedux'
+import PostListReduxThunk from '../posts/PostListReduxThunk'
+
 // Declare all navigation scenes using react-native-router-flux
 // set initial scene based on whether user has logged-in before
 class AppRoutes extends Component {
@@ -16,6 +20,10 @@ class AppRoutes extends Component {
           <Scene key='welcome' component={Welcome} title='Welcome' />
           <Scene key='page1' component={Page1} title='Page 1' initial={this.props.isLoggedIn} />
           <Scene key='page2' component={Page2} title='Page 2' />
+
+          <Scene key='posts1' component={PostList} title='Post List' />
+          <Scene key='posts2' component={PostListRedux} title='Post List Redux' />
+          <Scene key='posts3' component={PostListReduxThunk} title='Post List Redux Thunk' />
         </Scene>
       </Router>
     )
