@@ -34,6 +34,12 @@ class Page1 extends Component {
             title='Page 2'
           />
         </View>
+        <View style={styles.button}>
+          <Button
+            onPress={() => Actions.posts1()}
+            title='Posts'
+          />
+        </View>
       </View>
     )
   }
